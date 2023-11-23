@@ -1,0 +1,87 @@
+body {
+  background-color: #f8f9fa;
+  color: #343a40;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+  color: black;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.card-header {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+}
+
+.carousel-inner {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  color: #007bff;
+  font-size: 24px;
+}
+
+.carousel-indicators {
+  bottom: -30px;
+}
+
+.navbar-toggler-icon {
+  color: #007bff;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #343a40;
+  color: #dee2e6;
+}
+
+body.dark-mode .card {
+  background-color: #343a40;
+  color: #dee2e6;
+}
+
+body.dark-mode .card-header {
+  background-color: #212529;
+}
+
+body.dark-mode .carousel-control-prev,
+body.dark-mode .carousel-control-next {
+  color: #dee2e6;
+}
+
+/* Estilos específicos para el modo claro en la barra de navegación */
+body.light-mode .navbar {
+  background-color: white;
+}
+
+body.light-mode .navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+
+body.light-mode .navbar-light .navbar-toggler-icon {
+  color: black;
+}
+
+/* Estilos para el botón de cambio de modo */
+.mode-toggle-btn {
+  border-radius: 20px;
+  padding: 8px 20px;
+}
