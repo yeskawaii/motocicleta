@@ -85,3 +85,14 @@ body.light-mode .navbar-light .navbar-toggler-icon {
   border-radius: 20px;
   padding: 8px 20px;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black; /* Color en modo claro */
+}
+
+/* Flechas del carrusel en modo oscuro */
+.dark-mode .carousel-control-prev-icon,
+.dark-mode .carousel-control-next-icon {
+  background-color: white; /* Color en modo oscuro */
+}
