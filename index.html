@@ -31,7 +31,7 @@
     </nav>
 
     <!-- Carrusel con tarjetas -->
-    <div id="carouselExampleControls" class="carousel slide mt-4" data-ride="carousel" data-interval="5000">
+    <div id="carouselExampleControls" class="carousel slide mt-4" data-ride="carousel" data-interval="3000">
         <div class="carousel-inner">
             <!-- Item 1: Temperatura -->
             <div class="carousel-item active" style="height: 80vh;">
@@ -59,7 +59,20 @@
                 </div>
             </div>
 
-            <!-- Item 3: Otros Datos -->
+            <!-- Item 3: Proximidad2 -->
+            <div class="carousel-item" style="height: 80vh;">
+                <div class="card text-center h-100">
+                    <div class="card-header">
+                        Proximidad2
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Cerca</h5>
+                        <p class="card-text">Información adicional sobre la proximidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4: Otros Datos -->
             <div class="carousel-item" style="height: 80vh;">
                 <div class="card text-center h-100">
                     <div class="card-header">
@@ -73,14 +86,14 @@
             </div>
             <!-- Agrega más tarjetas según sea necesario -->
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <!-- <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Anterior</span>
         </a>
         <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Siguiente</span>
-        </a>
+        </a> -->
     </div>
 
     <!-- Incluye los scripts de Bootstrap y FontAwesome al final del documento -->
@@ -93,6 +106,33 @@
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
         }
+
+        $(document).ready(function () {
+            $('#carouselExampleControls').on('slid.bs.carousel', function () {
+                var currentIndex = $('#carouselExampleControls .carousel-inner .carousel-item.active').index();
+                // var speed = 100; // Intervalo de tiempo predeterminado
+
+                // Ajusta el intervalo de tiempo basado en el índice actual
+                if (currentIndex === 0) {
+                    console.log(currentIndex);
+                    speed = 200; // Primer paso más lento
+                } else if (currentIndex === 1) {
+                    console.log(currentIndex);
+                    speed = 100; // Segundo paso más rápido
+                } else if (currentIndex === 2) {
+                    console.log(currentIndex);
+                    speed = 100; // Tercer paso aún más rápido
+                } else {
+                    console.log(currentIndex);
+                    speed = 0; // Cuarto paso, detener el carrusel
+                }
+                console.log(speed);
+                // Actualiza el intervalo de tiempo del carrusel
+                $('#carouselExampleControls').carousel('pause').carousel({
+                    interval: speed
+                });
+            });
+        });
     </script>
 </body>
 
