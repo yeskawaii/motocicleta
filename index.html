@@ -31,17 +31,29 @@
     </nav>
 
     <!-- Carrusel con tarjetas -->
-    <div id="carouselExampleControls" class="carousel slide mt-4" data-ride="carousel" data-interval="3000">
+    <div id="carouselExampleControls" class="carousel slide mt-4" data-ride="carousel" data-interval="5000">
         <div class="carousel-inner">
             <!-- Item 1: Temperatura -->
             <div class="carousel-item active" style="height: 80vh;">
                 <div class="card text-center h-100">
                     <div class="card-header">
-                        Temperatura
+                        Calentando motor
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">25°C</h5>
-                        <p class="card-text">Información adicional sobre la temperatura.</p>
+                        <h5 class="card-title">3seg</h5>
+                        <p class="card-text">Espere porfavor en lo que se calienta el motor.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item" style="height: 80vh;">
+                <div class="card text-center h-100">
+                    <div class="card-header">
+                        Motor Caliente
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-fire" style="color: red;"></i></h5>
+                        <p class="card-text">El motor ya se encuentra caliente.</p>
                     </div>
                 </div>
             </div>
@@ -50,11 +62,11 @@
             <div class="carousel-item" style="height: 80vh;">
                 <div class="card text-center h-100">
                     <div class="card-header">
-                        Proximidad
+                        Proximidad izquierda
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Cerca</h5>
-                        <p class="card-text">Información adicional sobre la proximidad.</p>
+                        <h5 class="card-title">Distancia</h5>
+                        <p class="card-text">El objeto se encuentra a 15 cm.</p>
                     </div>
                 </div>
             </div>
@@ -63,11 +75,11 @@
             <div class="carousel-item" style="height: 80vh;">
                 <div class="card text-center h-100">
                     <div class="card-header">
-                        Proximidad2
+                        Proximidad derecha
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Cerca</h5>
-                        <p class="card-text">Información adicional sobre la proximidad.</p>
+                        <h5 class="card-title">Distancia</h5>
+                        <p class="card-text">El objeto se encuentra a 15 cm.</p>
                     </div>
                 </div>
             </div>
@@ -76,11 +88,11 @@
             <div class="carousel-item" style="height: 80vh;">
                 <div class="card text-center h-100">
                     <div class="card-header">
-                        Otros Datos
+                        Temperatura
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Valor</h5>
-                        <p class="card-text">Información adicional sobre otros datos.</p>
+                        <h5 class="card-title">25 C</h5>
+                        <p class="card-text">Esta es la temperatura actual</p>
                     </div>
                 </div>
             </div>
@@ -113,13 +125,13 @@
                 // var speed = 100; // Intervalo de tiempo predeterminado
 
                 // Ajusta el intervalo de tiempo basado en el índice actual
-                if (currentIndex === 0) {
+                if (currentIndex === 1) {
                     console.log(currentIndex);
                     speed = 200; // Primer paso más lento
-                } else if (currentIndex === 1) {
+                } else if (currentIndex === 2) {
                     console.log(currentIndex);
                     speed = 100; // Segundo paso más rápido
-                } else if (currentIndex === 2) {
+                } else if (currentIndex === 3) {
                     console.log(currentIndex);
                     speed = 100; // Tercer paso aún más rápido
                 } else {
