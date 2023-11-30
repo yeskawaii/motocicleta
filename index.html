@@ -123,31 +123,6 @@
             var countdownElement = $('#countdown');
             var initialCountdown = parseInt(countdownElement.text());
 
-            $('#carouselExampleControls').on('slid.bs.carousel', function () {
-                var currentIndex = $('#carouselExampleControls .carousel-inner .carousel-item.active').index();
-                var speed = 1000; // Intervalo de tiempo predeterminado
-
-                // Ajusta el intervalo de tiempo basado en el índice actual
-                if (currentIndex === 1) {
-                    console.log(currentIndex);
-                    speed = 100; // Primer paso más lento
-                } else if (currentIndex === 2) {
-                    console.log(currentIndex);
-                    speed = 100; // Segundo paso más rápido
-                } else if (currentIndex === 3) {
-                    console.log(currentIndex);
-                    speed = 100; // Tercer paso aún más rápido
-                } else if (currentIndex === 4) {
-                    console.log(currentIndex);
-                    speed = 0; // Cuarto paso, detener el carrusel
-                }
-                console.log(speed);
-                // Actualiza el intervalo de tiempo del carrusel
-                $('#carouselExampleControls').carousel('pause').carousel({
-                    interval: speed
-                });
-            });
-
             // Inicia el contador
             startCountdown();
 
